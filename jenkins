@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    parameters {
+        choice(name: 'Choice', choices: ['us-west-1', 'us-west-2'], description: 'Select one')
+    }
+
+    stages {
+        stage('Hello') {
+            steps {
+                script {
+                    // Print the selected region
+                    sh "echo Choice: ${params.Choice}"
+                }
+            }
+        }
+    }
+}
