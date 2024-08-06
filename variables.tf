@@ -10,3 +10,7 @@ variable "aws_secret_key" {
   type        = string
   sensitive   = true
 }
+variable "region" {
+  description = "user defined"
+  type        = string
+}
