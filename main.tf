@@ -2,7 +2,7 @@
 
 # Specify the Terraform provider
 provider "aws" {
-  region     = "us-west-2" # Change this to your preferred AWS region
+  region     = var.region # Change this to your preferred AWS region
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
 }
